@@ -1,0 +1,166 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7">
+  <diagram name="Диаграмма деятельности Создание обращения" id="phRHPJ3vfivfZ2xbCzrP">
+    <mxGraphModel dx="2562" dy="1320" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main-container" value="" style="swimlane;fontStyle=1;startSize=0;rounded=1;align=center;horizontal=0;swimlaneFillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="40" y="60" width="880" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-title" value="Диаграмма деятельности: Создание нового обращения пользователем" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" parent="main-container" vertex="1">
+          <mxGeometry y="10" width="880" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start-node" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" parent="main-container" vertex="1">
+          <mxGeometry x="425" y="80" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="action-open-app" value="Пользователь открывает приложение" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="140" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="InqLyh0Zy03hct5WZ0fV-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main-container" source="decision-is-authorized" target="action-press-create">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="310" />
+              <mxPoint x="580" y="473" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="InqLyh0Zy03hct5WZ0fV-2" value="Да" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="InqLyh0Zy03hct5WZ0fV-1">
+          <mxGeometry x="-0.8501" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="decision-is-authorized" value="Пользователь авторизован?" style="rhombus;whiteSpace=wrap;html=1;rounded=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="370" y="240" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="action-authorize" value="Проходит авторизацию" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="120" y="280" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action-press-create" value="Нажимает кнопку &quot;Создать обращение&quot; (+)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="490" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action-get-gps" value="Система определяет геолокацию" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="593" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action-fill-form" value="Пользователь заполняет форму (фото, категория, описание)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="693" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="action-press-submit" value="Нажимает кнопку &quot;Отправить&quot;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="803" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action-validate-data" value="Система проверяет корректность данных" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="903" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-is-valid" value="Данные корректны?" style="rhombus;whiteSpace=wrap;html=1;rounded=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="370" y="1003" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="action-show-error" value="Отобразить сообщение об ошибке" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="620" y="1043" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action-save-issue" value="Система сохраняет обращение в БД" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="1183" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action-show-success" value="Отобразить сообщение об успехе" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;" parent="main-container" vertex="1">
+          <mxGeometry x="340" y="1283" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="end-node" value="" style="ellipse;html=1;shape=endState;fillColor=none;strokeColor=#000000;strokeWidth=2;" parent="main-container" vertex="1">
+          <mxGeometry x="425" y="1383" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-start-open" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="start-node" target="action-open-app" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="120" as="sourcePoint" />
+            <mxPoint x="440" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-open-decision" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-open-app" target="decision-is-authorized" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="210" as="sourcePoint" />
+            <mxPoint x="440" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-decision-no" value="[нет]" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;" parent="main-container" source="decision-is-authorized" target="action-authorize" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="310" as="sourcePoint" />
+            <mxPoint x="300" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-authorize-merge" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;" parent="main-container" source="action-authorize" target="decision-is-authorized" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="400" as="sourcePoint" />
+            <mxPoint x="200" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="400" />
+              <mxPoint x="200" y="460" />
+              <mxPoint x="320" y="460" />
+              <mxPoint x="440" y="460" />
+              <mxPoint x="440" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-create-gps" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-press-create" target="action-get-gps" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="490" as="sourcePoint" />
+            <mxPoint x="440" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-gps-form" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-get-gps" target="action-fill-form" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="590" as="sourcePoint" />
+            <mxPoint x="440" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-form-submit" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-fill-form" target="action-press-submit" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="700" as="sourcePoint" />
+            <mxPoint x="440" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-submit-validate" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-press-submit" target="action-validate-data" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="800" as="sourcePoint" />
+            <mxPoint x="440" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-validate-decision" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-validate-data" target="decision-is-valid" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="900" as="sourcePoint" />
+            <mxPoint x="440" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-valid-no" value="[нет]" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="decision-is-valid" target="action-show-error" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="1000" as="sourcePoint" />
+            <mxPoint x="610" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-error-loop" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;" parent="main-container" source="action-show-error" target="action-fill-form" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="790" y="1000" as="sourcePoint" />
+            <mxPoint x="550" y="655" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="800" />
+              <mxPoint x="650" y="728" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-valid-yes" value="[да]" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="decision-is-valid" target="action-save-issue" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="1080" as="sourcePoint" />
+            <mxPoint x="440" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-save-success" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-save-issue" target="action-show-success" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="1180" as="sourcePoint" />
+            <mxPoint x="440" y="1220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-success-end" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="action-show-success" target="end-node" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="1280" as="sourcePoint" />
+            <mxPoint x="440" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

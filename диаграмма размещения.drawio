@@ -1,0 +1,67 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7">
+  <diagram name="диаграмма размещения" id="d2Q1YgARyNnF7KoDW3V4">
+    <mxGraphModel dx="1463" dy="1766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="diagram-title" value="Диаграмма размещения системы «ПИТТАСИ»" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="427" y="40" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="node-client-device" value="Клиентское устройство" style="shape=umlNode;fontStyle=1;align=left;spacingLeft=10;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="520" y="120" width="360" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="artifact-mobile-app" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;Мобильное приложение (Flutter)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="node-client-device" vertex="1">
+          <mxGeometry x="80" y="50" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="shape-cloud" value="" style="shape=cloud;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="20" y="190" width="1580" height="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="node-app-server" value="Сервер приложений (Docker)" style="shape=umlNode;fontStyle=1;align=left;spacingLeft=10;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="420" y="475" width="560" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="artifact-nestjs-app" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;NestJS приложение" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="node-app-server" vertex="1">
+          <mxGeometry x="180" y="50" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="container-modules" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;align=center;" parent="node-app-server" vertex="1">
+          <mxGeometry x="40" y="140" width="480" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-auth" value="Аутентификация (JWT)" style="shape=component;align=center;" parent="container-modules" vertex="1">
+          <mxGeometry x="30" y="40" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-users" value="Управление пользователями" style="shape=component;align=center;" parent="container-modules" vertex="1">
+          <mxGeometry x="30" y="100" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-issues" value="Управление обращениями" style="shape=component;align=center;" parent="container-modules" vertex="1">
+          <mxGeometry x="30" y="160" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-social" value="Управление комментариями и голосованием" style="shape=component;align=center;" parent="container-modules" vertex="1">
+          <mxGeometry x="30" y="220" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bcz1_n6v35tpZnbyCmo4-1" value="Модули приложения" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="container-modules">
+          <mxGeometry x="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="node-db-server" value="Сервер Базы Данных" style="shape=umlNode;fontStyle=1;align=left;spacingLeft=10;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1160" y="610" width="240" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="artifact-db" value="&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;br&gt;PostgreSQL (+PostGIS)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="node-db-server" vertex="1">
+          <mxGeometry x="60" y="87.5" width="120" height="87.5" as="geometry" />
+        </mxCell>
+        <mxCell id="comm-app-server" value="GraphQL запросы (HTTPS)" style="endArrow=classic;html=1;rounded=0;" parent="1" source="node-client-device" target="node-app-server" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="270" as="sourcePoint" />
+            <mxPoint x="830" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comm-server-db" value="SQL запросы (TCP/IP)" style="endArrow=classic;html=1;rounded=0;" parent="1" source="node-app-server" target="node-db-server" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="970" y="680" as="sourcePoint" />
+            <mxPoint x="1030" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bcz1_n6v35tpZnbyCmo4-2" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;Облачная инфраструктура&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1020" width="550" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,114 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Диаграмма состояний Пользователя" id="Y_H6jbmI4OxKILtUO0T9">
+    <mxGraphModel dx="1475" dy="1466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main-container" value="Пользователь" style="swimlane;fontStyle=1;startSize=20;rounded=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="80" y="120" width="1000" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-title" value="Диаграмма состояний Пользователя в системе «ПИТТАСИ»" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" parent="main-container" vertex="1">
+          <mxGeometry x="200" y="30" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="start-state" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" parent="main-container" vertex="1">
+          <mxGeometry x="485" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="state-unauthorized" value="Неавторизован" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1" parent="main-container" vertex="1">
+          <mxGeometry x="420" y="110" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="state-authorized" value="Авторизован" style="swimlane;fontStyle=1;startSize=23;rounded=1;align=center;horizontal=1;swimlaneFillColor=none;strokeColor=default;" parent="main-container" vertex="1">
+          <mxGeometry x="80" y="220" width="840" height="550" as="geometry">
+            <mxRectangle x="80" y="270" width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="region-activity" value="Состояния деятельности" style="swimlane;fontStyle=0;startSize=23;rounded=1;align=center;horizontal=1;swimlaneFillColor=none;strokeColor=default;dashed=1;" parent="state-authorized" vertex="1">
+          <mxGeometry x="40" y="40" width="760" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="start-activity" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" parent="region-activity" vertex="1">
+          <mxGeometry x="30" y="115" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="state-viewing-map" value="Просмотр карты" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1" parent="region-activity" vertex="1">
+          <mxGeometry x="110" y="100" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="state-working-issue" value="Работа с обращением&lt;hr&gt;(создание/просмотр)" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1" parent="region-activity" vertex="1">
+          <mxGeometry x="540" y="100" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="transition-view-work" value="Нажимает &#39;+&#39; или метку" style="endArrow=classic;html=1;rounded=0;" parent="region-activity" source="state-viewing-map" target="state-working-issue" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="100" as="sourcePoint" />
+            <mxPoint x="420" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition-work-view" value="Возвращается на карту" style="endArrow=classic;html=1;rounded=0;" parent="region-activity" source="state-working-issue" target="state-viewing-map" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="150" as="sourcePoint" />
+            <mxPoint x="360" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition-start-viewing" value="" style="endArrow=classic;html=1;rounded=0;" parent="region-activity" source="start-activity" target="state-viewing-map" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="120" as="sourcePoint" />
+            <mxPoint x="170" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="region-role" value="Ролевые состояния" style="swimlane;fontStyle=0;startSize=23;rounded=1;align=center;horizontal=1;swimlaneFillColor=none;strokeColor=default;dashed=1;" parent="state-authorized" vertex="1">
+          <mxGeometry x="40" y="290" width="760" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="start-role" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" parent="region-role" vertex="1">
+          <mxGeometry x="20" y="60" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="state-role-citizen" value="Житель города" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1" parent="region-role" vertex="1">
+          <mxGeometry x="525" y="50" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="state-role-moderator" value="Модератор" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontStyle=1" parent="region-role" vertex="1">
+          <mxGeometry x="525" y="130" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="transition-role-citizen" value="[Роль = &#39;Житель&#39;]" style="endArrow=classic;html=1;rounded=0;" parent="region-role" source="start-role" target="state-role-citizen" edge="1">
+          <mxGeometry x="0.0667" y="15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="75" as="sourcePoint" />
+            <mxPoint x="230" y="75" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition-role-moderator" value="[Роль = &#39;Модератор&#39;]" style="endArrow=classic;html=1;rounded=0;" parent="region-role" source="start-role" target="state-role-moderator" edge="1">
+          <mxGeometry x="0.395" y="19" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="85" as="sourcePoint" />
+            <mxPoint x="390" y="85" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="110" y="140" />
+              <mxPoint x="170" y="160" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition-unauth-auth" value="Успешная аутентификация" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="state-unauthorized" target="state-authorized" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="230" as="sourcePoint" />
+            <mxPoint x="500" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition-auth-unauth" value="Выход из системы" style="endArrow=classic;html=1;rounded=0;exitX=0.262;exitY=-0.002;exitDx=0;exitDy=0;exitPerimeter=0;" parent="main-container" source="state-authorized" target="state-unauthorized" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="260" as="sourcePoint" />
+            <mxPoint x="370" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition-start-unauth" value="" style="endArrow=classic;html=1;rounded=0;" parent="main-container" source="start-state" target="state-unauthorized" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="150" as="sourcePoint" />
+            <mxPoint x="500" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
